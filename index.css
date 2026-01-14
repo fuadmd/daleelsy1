@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* التنسيق الموحد لجميع الحقول مع تحسين التباين */
+  .app-input {
+    @apply w-full h-14 px-5 rounded-2xl border-2 outline-none transition-all duration-200 flex items-center;
+    /* الوضع النهاري: تباين عالٍ */
+    @apply bg-white border-gray-300 text-gray-900 placeholder-gray-500 font-bold;
+    @apply focus:border-primary focus:ring-4 focus:ring-primary/10;
+    /* الوضع الليلي: تباين عالٍ */
+    @apply dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400;
+    @apply dark:focus:border-primary dark:focus:ring-primary/20;
+  }
+  
+  .app-textarea {
+    @apply w-full min-h-[150px] p-5 rounded-2xl border-2 outline-none transition-all duration-200;
+    @apply bg-white border-gray-300 text-gray-900 placeholder-gray-500 font-bold leading-relaxed;
+    @apply focus:border-primary focus:ring-4 focus:ring-primary/10;
+    @apply dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400;
+    @apply dark:focus:border-primary dark:focus:ring-primary/20;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-500 rounded-full;
+  }
+}
+
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #1e40af;
+}
+
+body {
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lang-ar { font-family: 'Tajawal', sans-serif; }
+.lang-en { font-family: 'Inter', sans-serif; }
+
+.animate-fade-in { animation: fadeIn 0.4s ease-out; }
+.animate-zoom-in { animation: zoomIn 0.3s ease-out; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.98); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+@media print {
+  .print\:hidden { display: none !important; }
+}
