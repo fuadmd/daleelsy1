@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
 export const translations = {
   ar: {
     appName: "دليل سوري",
@@ -11,14 +15,21 @@ export const translations = {
     logout: "تسجيل الخروج",
     dashboard: "لوحة التحكم",
     adminPanel: "لوحة الإدارة",
+<<<<<<< HEAD
     employerPanel: "لوحة صاحب العمل",
     latestJobs: "أحدث الوظائف",
     searchPlaceholder: "ابحث عن وظيفة...",
+=======
+    employerPanel: "بوابة أصحاب العمل",
+    latestJobs: "أحدث الفرص الوظيفية",
+    searchPlaceholder: "ما الذي تبحث عنه؟",
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     allRegions: "كل المناطق",
     allSpecialties: "كل التخصصات",
     active: "نشط",
     expired: "منتهي",
     pending: "قيد الانتظار",
+<<<<<<< HEAD
     scheduled: "مجدول",
     applyNow: "تقدم الآن",
     postJob: "إضافة وظيفة",
@@ -77,6 +88,31 @@ export const translations = {
     medical: "طب",
     management: "إدارة",
     rif_dimashq: "ريف دمشق",
+=======
+    applyNow: "تقدم الآن",
+    postJob: "نشر وظيفة",
+    selectAccountType: "اختر نوع الحساب للبدء",
+    iAmCandidate: "أنا باحث عن عمل",
+    iAmCandidateDesc: "أريد بناء سيرتي الذاتية والتقدم للوظائف",
+    iAmEmployer: "أنا صاحب عمل / شركة",
+    iAmEmployerDesc: "أريد نشر وظائف والبحث عن كفاءات",
+    continueWithGoogle: "المتابعة باستخدام Google",
+    orContinueWithEmail: "أو المتابعة عبر البريد الإلكتروني",
+    email: "البريد الإلكتروني",
+    password: "كلمة المرور",
+    noAccount: "ليس لديك حساب؟",
+    hasAccount: "لديك حساب بالفعل؟",
+    createAccount: "إنشاء الحساب",
+    // ... بقية الترجمات السابقة
+    it: "تكنولوجيا المعلومات",
+    engineering: "هندسة",
+    medical: "طب",
+    management: "إدارة",
+    damascus: "دمشق",
+    rif_dimashq: "ريف دمشق",
+    aleppo: "حلب",
+    homs: "حمص",
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     hama: "حماة",
     latakia: "اللاذقية",
     tartus: "طرطوس",
@@ -87,6 +123,7 @@ export const translations = {
     daraa: "درعا",
     suwayda: "السويداء",
     quneitra: "القنيطرة",
+<<<<<<< HEAD
     limitedAdmin: "مشرف",
     superAdmin: "مدير عام",
     settings: "إعدادات",
@@ -114,6 +151,20 @@ export const translations = {
   en: {
     appName: "DaleelSy",
     tagline: "Your career gateway in Syria",
+=======
+    candidate: "مرشح",
+    employer: "صاحب عمل",
+    limitedAdmin: "مشرف محدود",
+    superAdmin: "مشرف عام",
+    settings: "الإعدادات",
+    stats: "الإحصائيات",
+    users: "المستخدمين",
+    employees: "الكفاءات"
+  },
+  en: {
+    appName: "DaleelSy",
+    tagline: "Your professional gateway to the future in Syria",
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     home: "Home",
     jobs: "Jobs",
     login: "Login",
@@ -123,14 +174,21 @@ export const translations = {
     logout: "Logout",
     dashboard: "Dashboard",
     adminPanel: "Admin Panel",
+<<<<<<< HEAD
     employerPanel: "Employer Dashboard",
     latestJobs: "Latest Jobs",
     searchPlaceholder: "Search jobs...",
+=======
+    employerPanel: "Employer Portal",
+    latestJobs: "Latest Job Openings",
+    searchPlaceholder: "Search...",
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     allRegions: "All Regions",
     allSpecialties: "All Specialties",
     active: "Active",
     expired: "Expired",
     pending: "Pending",
+<<<<<<< HEAD
     scheduled: "Scheduled",
     applyNow: "Apply Now",
     postJob: "Post Job",
@@ -184,10 +242,28 @@ export const translations = {
     damascus: "Damascus",
     aleppo: "Aleppo",
     homs: "Homs",
+=======
+    applyNow: "Apply Now",
+    postJob: "Post a Job",
+    selectAccountType: "Select Account Type",
+    iAmCandidate: "I am a Candidate",
+    iAmCandidateDesc: "Search for jobs and build my CV",
+    iAmEmployer: "I am an Employer",
+    iAmEmployerDesc: "Post jobs and find talent",
+    continueWithGoogle: "Continue with Google",
+    orContinueWithEmail: "Or continue with Email",
+    email: "Email Address",
+    password: "Password",
+    noAccount: "Don't have an account?",
+    hasAccount: "Already have an account?",
+    createAccount: "Create Account",
+    // ... بقية الترجمات السابقة
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     it: "IT",
     engineering: "Engineering",
     medical: "Medical",
     management: "Management",
+<<<<<<< HEAD
     rif_dimashq: "Rif Dimashq",
     hama: "Hama",
     latakia: "Latakia",
@@ -224,3 +300,11 @@ export const translations = {
     demoCandidate: "Demo Login (Candidate)"
   }
 };
+=======
+    damascus: "Damascus",
+    candidate: "Candidate",
+    employer: "Employer",
+    superAdmin: "Super Admin"
+  }
+};
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
 import React, { useState, useEffect } from 'react';
 import { User, UserRole, Language, Job, AppSettings } from './types';
 import { translations } from './translations';
@@ -51,6 +55,7 @@ const App: React.FC = () => {
   });
 
   useEffect(() => {
+<<<<<<< HEAD
     // مراقبة حالة المصادقة من Supabase
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (session?.user) {
@@ -72,17 +77,52 @@ const App: React.FC = () => {
     return () => subscription.unsubscribe();
   }, []);
 
+=======
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) fetchProfile(session.user.id);
+      else setLoading(false);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session) fetchProfile(session.user.id);
+      else setCurrentUser(null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
   const fetchJobs = async () => {
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
       .order('created_at', { ascending: false });
+<<<<<<< HEAD
     if (!error && data) {
       setJobs(data as Job[]);
+=======
+    if (!error && data) setJobs(data as Job[]);
+  };
+
+  const fetchProfile = async (userId: string) => {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .single();
+    
+    if (!error && data) {
+      setCurrentUser(data as User);
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     }
     setLoading(false);
   };
 
+<<<<<<< HEAD
   const handleToggleSaveJob = async (jobId: string) => {
     if (!currentUser) {
       setCurrentPage('login');
@@ -109,6 +149,8 @@ const App: React.FC = () => {
     setJobs(prev => prev.filter(j => j.id !== jobId));
   };
 
+=======
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
   useEffect(() => {
     const isDark = settings.theme === 'dark';
     const activePrimary = isDark ? settings.darkPrimaryColor : settings.lightPrimaryColor;
@@ -140,6 +182,7 @@ const App: React.FC = () => {
 
   return (
     <div className={`min-h-screen flex flex-col relative`}>
+<<<<<<< HEAD
       {settings.bgPatternUrl && (
         <div 
           className="fixed inset-0 pointer-events-none z-[-1] transition-opacity duration-500" 
@@ -229,8 +272,40 @@ const App: React.FC = () => {
             </p>
         </div>
       </footer>
+=======
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar 
+          lang={lang} 
+          setLang={setLang} 
+          currentUser={currentUser} 
+          onLogout={handleLogout}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+          theme={settings.theme}
+          toggleTheme={toggleTheme}
+        />
+        
+        <main className="flex-grow container mx-auto px-4 py-8">
+          {currentPage === 'home' && <Home lang={lang} jobs={jobs} onSelectJob={setSelectedJob} settings={settings} />}
+          {currentPage === 'admin' && <AdminDashboard lang={lang} settings={settings} setSettings={setSettings} />}
+          {currentPage === 'employer' && <EmployerDashboard lang={lang} jobs={jobs} employerId={currentUser?.id || ''} onAdd={fetchJobs} onUpdate={fetchJobs} onDelete={fetchJobs} />}
+          {currentPage === 'user' && <UserDashboard lang={lang} user={currentUser} jobs={jobs} />}
+          {currentPage === 'login' && <Login lang={lang} onLogin={() => setCurrentPage('home')} />}
+        </main>
+
+        {selectedJob && <JobDetailModal job={selectedJob} lang={lang} onClose={() => setSelectedJob(null)} />}
+
+        <footer className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-t dark:border-gray-700 py-6 text-center text-gray-500 dark:text-gray-400">
+          <p>{lang === 'ar' ? settings.footerTextAr : settings.footerTextEn}</p>
+        </footer>
+      </div>
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3

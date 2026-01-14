@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 @layer components {
   /* التنسيق الموحد لجميع الحقول مع تحسين التباين */
   .app-input {
@@ -33,12 +38,15 @@
   }
 }
 
+=======
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
 :root {
   --primary-color: #3b82f6;
   --secondary-color: #1e40af;
 }
 
 body {
+<<<<<<< HEAD
   @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -56,3 +64,18 @@ body {
 @media print {
   .print\:hidden { display: none !important; }
 }
+=======
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+>>>>>>> e7845ac54a0ad1844f63552e18a8a111d385aaa3
